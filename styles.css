@@ -7,14 +7,13 @@
   --mono:"Geist Mono",ui-monospace,Menlo,Consolas,monospace;
   color-scheme:light;
 }
-@media (prefers-color-scheme: dark){:root{
-  --bg:#0c0c0c; --fg:#ededed; --muted:#7a7a7a; --line:#1f1f1f; --soft:#161616;
-  --accent:#ededed; --accent-ink:#0c0c0c; --pool:#f0a24a; --bad:#ef7a70; color-scheme:dark}}
 
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased}
 [hidden]{display:none!important}
+html{color-scheme:light}
+option,optgroup{background:#ffffff;color:#111111}
 
 .wrap{max-width:1160px;margin:0 auto;padding-block:48px 80px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));display:grid;gap:48px}
 
