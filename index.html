@@ -7,7 +7,7 @@
 <title>Inventario del Gremio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=6">
+<link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 <div class="wrap">
@@ -30,7 +30,7 @@
 
   <div class="grid">
     <div class="col">
-      <section class="panel">
+      <section class="panel p-buy">
         <h2>Cargar compra</h2>
         <form id="fBuy">
           <label class="field"><span>Producto</span><input id="bName" list="prodList" placeholder="Ej. Coca-Cola lata" required autocomplete="off"></label>
@@ -50,7 +50,7 @@
         </form>
       </section>
 
-      <section class="panel">
+      <section class="panel p-use">
         <h2>Registrar consumo</h2>
         <form id="fUse">
           <div class="row">
@@ -65,18 +65,18 @@
     </div>
 
     <div class="col">
-      <section class="panel">
+      <section class="panel p-mine">
         <h2 id="mineTitle">Mi saldo</h2>
         <div class="mine" id="mine"></div>
       </section>
 
-      <section class="panel">
+      <section class="panel p-table">
         <h2>Inventario por miembro</h2>
         <p class="status" id="status">Conectando con la hoja del gremio…</p>
         <div class="tablebox"><table id="tbl"></table></div>
       </section>
 
-      <section class="panel">
+      <section class="panel p-hist">
         <h2>Historial</h2>
         <div class="hist" id="hist"></div>
         <p><button class="link" id="changeKey" type="button">Cambiar clave del gremio</button></p>
@@ -86,7 +86,7 @@
 </div>
 <div class="toast" id="toast" hidden></div>
 
-<script src="config.js?v=6"></script>
-<script src="app.js?v=6"></script>
+<script src="config.js?v=7"></script>
+<script src="app.js?v=7"></script>
 </body>
 </html>

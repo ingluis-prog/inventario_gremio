@@ -15,6 +15,7 @@ body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:18px
 [hidden]{display:none!important}
 option,optgroup{background:#ffffff;color:#0f0f0f}
 
+.wrap>*{min-width:0}
 .wrap{max-width:1320px;margin:0 auto;padding-block:40px 80px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));display:grid;gap:44px}
 
 header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px}
@@ -25,7 +26,14 @@ h1{font-family:var(--display);font-size:clamp(30px,4vw,40px);font-weight:700;let
 .who select{width:auto;font-size:20px;font-weight:700;cursor:pointer}
 
 .grid{display:grid;grid-template-columns:350px 1fr;gap:40px;align-items:start}
-@media (max-width:960px){.grid{grid-template-columns:1fr}}
+/* En teléfono y pantallas angostas: primero el saldo de la persona, luego registrar consumo,
+   cargar compra, la tabla de todos y el historial. */
+@media (max-width:960px){
+  .grid{display:flex;flex-direction:column;gap:40px;min-width:0}
+  .grid .panel{width:100%;max-width:100%}
+  .grid>.col{display:contents}
+  .p-mine{order:1} .p-use{order:2} .p-buy{order:3} .p-table{order:4} .p-hist{order:5}
+}
 .col{display:grid;gap:44px;min-width:0}
 .panel{min-width:0}
 h2{font-family:var(--display);font-size:22px;font-weight:600;margin:0 0 16px;color:var(--fg)}
@@ -94,6 +102,11 @@ td.me{background:var(--soft)}
 
 @media (max-width:520px){
   body{font-size:17px}
+  .wrap{padding-block:24px 64px;gap:28px}
+  header{flex-direction:column;align-items:stretch;gap:14px}
+  .sub{display:none}
+  .who select{flex:1}
+  .mine{grid-template-columns:repeat(2,1fr)}
   .hist .e{grid-template-columns:1fr auto}
   .hist .tag{grid-column:1/-1}
 }
