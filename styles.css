@@ -5,14 +5,14 @@
   --accent:#111111; --accent-ink:#ffffff; --pool:#b45309; --bad:#c0362c;
   --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"Geist Mono",ui-monospace,Menlo,Consolas,monospace;
-  color-scheme:light;
+  color-scheme:only light;
 }
 
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased}
 [hidden]{display:none!important}
-html{color-scheme:light}
+html{color-scheme:only light}
 option,optgroup{background:#ffffff;color:#111111}
 
 .wrap{max-width:1160px;margin:0 auto;padding-block:48px 80px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));display:grid;gap:48px}
