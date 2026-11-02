@@ -98,7 +98,7 @@
     const tbl = $("tbl");
     if (!prods.length) tbl.innerHTML = "";
     else {
-      let h = "<thead><tr><th>Producto</th><th>Total</th><th>C/u</th><th title="Bolsa común">Bolsa</th>" +
+      let h = "<thead><tr><th>Producto</th><th>Total</th><th>C/u</th><th title='Bolsa común'>Bolsa</th>" +
         MEMBERS.map((m) => `<th class="${m === me ? "me" : ""}" title="${esc(m)}">${esc(first(m))}</th>`).join("") + "</tr></thead><tbody>";
       for (const p of prods) {
         h += `<tr><td><span class="cat">${esc(p.cat)}</span>${esc(p.name)}</td><td class="num">${p.bought}</td><td class="num">${p.each}</td><td><span class="pool ${p.pool ? "" : "zero"}">${p.pool}</span></td>` +
